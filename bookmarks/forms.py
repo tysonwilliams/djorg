@@ -1,7 +1,7 @@
-from djang import forms
-from .model import Bookmark
+from django import forms
+from .models import Bookmark
 
-class BookmarkForm(forms.ModelForm);
+class BookmarkForm(forms.ModelForm):
 
   class Meta:
     model = Bookmark
