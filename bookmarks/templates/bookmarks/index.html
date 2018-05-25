@@ -1,0 +1,17 @@
+<h1>Bookmarks</h1>
+
+{% if bookmarks %}
+
+Bookmarks:
+
+<ol>
+  {% for bookmark in bookmarks %}
+  <li>
+    <a href="{{ bookmark.url }}">{{ bookmark.name }}</a>
+  </li>
+  {% endfor %}
+</ol>
+
+{% else %}
+We have no bookmarks
+{% endif %}
