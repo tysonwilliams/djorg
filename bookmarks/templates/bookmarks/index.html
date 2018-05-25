@@ -15,3 +15,20 @@ Bookmarks:
 {% else %}
 We have no bookmarks
 {% endif %}
+
+
+{% if personal_bookmarks %}
+
+Personal Bookmarks:
+
+<ol>
+  {% for bookmark in personal_bookmarks %}
+  <li>
+    <a href="{{ bookmark.url }}">{{ bookmark.name }}</a>
+  </li>
+  {% endfor %}
+</ol>
+
+{% else %}
+We have no personal bookmarks
+{% endif %}
