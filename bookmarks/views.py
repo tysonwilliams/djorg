@@ -5,6 +5,15 @@ from .forms import BookmarkForm
 # Create your views here
 
 def index(request):
+  # import pdb; pdb.set_trace()
+
+  if request.method == "POST":
+    form = BookmarkForm(request.POST)
+    if form.is_valid():
+      form.save()
+    else:
+      pass
+
   context = {}
 
   pbid = PersonalBookmark.objects.values_list("id")
