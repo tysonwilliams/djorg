@@ -1,6 +1,6 @@
 from django.conf import settings
 from graphene_django import DjangoObjectType
-import graphene_django
+import graphene
 from .models import Note as NoteModel
 
 class Note(DjangoObjectType):
@@ -18,7 +18,7 @@ class Query(graphene.ObjectType):
 
     user = info.context.user
     
-    if settings.DEGUB:
+    if settings.DEBUG:
       return NoteModel.objects.all()
     elif user.is_anonymous:
       return NoteModel.objects.none()
