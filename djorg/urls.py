@@ -26,6 +26,7 @@ router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
 
 urlpatterns = [
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
     path('api/', include(router.urls)),
     path('', TemplateView.as_view(template_name='djorg_base.html')),
     path('bookmarks/', include('bookmarks.urls')),
