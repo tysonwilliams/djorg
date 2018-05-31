@@ -135,5 +135,5 @@ REST_FRAMEWORK = {
 
 # Graphene
 GRAPHENE = {
-    'SCHEMA': 'notes.schema.shema' # dir.filename.varname
+    'SCHEMA': 'notes.schema.schema' # dir.filename.varname
 }
