@@ -20,6 +20,8 @@ from django.views.generic import TemplateView
 from rest_framework import routers
 from notes.api import NoteViewSet
 
+from graphene_django.views import GraphQLView
+
 router = routers.DefaultRouter()
 router.register(r'notes', NoteViewSet)
 
